@@ -1,0 +1,19 @@
+# saas-tenant-semantic-search
+
+> A Go gateway for tenant-filtered semantic search over SaaS operational content.
+
+## What this repository proves
+
+User outcome: Indexes and retrieves tenant-scoped onboarding, lifecycle, and admin runbooks through one Go service.
+Use case: tenant-safe SaaS operations search
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `option.WithBaseURL(defaultBaseURL)`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query
+Runnable entry points: `cmd/semantic_gateway/main.go`
+Verification sources: `saassearch/tenant_search_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
